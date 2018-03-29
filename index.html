@@ -1,20 +1,50 @@
 <html>
 	<head>
 		<title>Matt Conflitti's Github Portfolio</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<style>
-			body {
-				text-align:center;
-			      	font-family:sans-serif;
-				width: 600px;
-				margin:  0 auto;
-				padding-top: 150px;
-			     }
-			ul, li {
-				list-style: none;
+			:root {
+			--jumbotron-padding-y: 3rem;
 			}
+
+			.jumbotron {
+			padding-top: var(--jumbotron-padding-y);
+			padding-bottom: var(--jumbotron-padding-y);
+			margin-bottom: 0;
+			background-color: #fff;
+			}
+			@media (min-width: 768px) {
+			.jumbotron {
+				padding-top: calc(var(--jumbotron-padding-y) * 2);
+				padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+			}
+			}
+
+			.jumbotron p:last-child {
+			margin-bottom: 0;
+			}
+
+			.jumbotron-heading {
+			font-weight: 300;
+			}
+
+			.jumbotron .container {
+			max-width: 40rem;
+			}
+
+			footer {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			}
+
+			footer p {
+			margin-bottom: .25rem;
+			}
+
+			.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 		</style>
 	</head>
-	<body>
+	<!-- <body>
 		<h1>Matthew David Conflitti</h1>
 		<h2>Web/Software Developer</h2>
 		<h3>Design Coming Soon!</h3>
@@ -31,5 +61,219 @@
 			<li><a href="https://github.com/MattConflitti/Minesweeper">Minesweeper</a> (C)</li>
 		</ul>
 		<h4><a href="mailto:conflittimat@gmail.com">Email me</a> if you have any questions!</h4>
+	</body> -->
+
+	<body>
+
+		<header>
+		  <div class="collapse bg-dark" id="navbarHeader">
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-8 col-md-7 py-4">
+				  <h4 class="text-white">About</h4>
+				  <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+				</div>
+				<div class="col-sm-4 offset-md-1 py-4">
+				  <h4 class="text-white">Contact me</h4>
+				  <ul class="list-unstyled">
+					<li><a href="mailto:matthew.conflitti@gmail.com" class="text-white">Email</a></li>
+					<li><a href="#" class="text-white">Github</a></li>
+					<li><a href="#" class="text-white">LinkedIn</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="navbar navbar-dark bg-dark box-shadow">
+			<div class="container d-flex justify-content-between">
+			  <a href="#" class="navbar-brand d-flex align-items-center">
+					<img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8Zz4KCQk8Zz4KCQkJPHBhdGggZD0iTTI0OC44MTgsMTk2LjI2N2MtMzcuNzAzLDAtNjguMjY3LDMwLjU2NC02OC4yNjcsNjguMjY3czMwLjU2NCw2OC4yNjcsNjguMjY3LDY4LjI2N3M2OC4yNjctMzAuNTY0LDY4LjI2Ny02OC4yNjcgICAgIEMzMTcuMDQyLDIyNi44NDksMjg2LjUwMywxOTYuMzEsMjQ4LjgxOCwxOTYuMjY3eiBNMjQ4LjgxOCwzMTUuNzMzYy0yOC4yNzcsMC01MS4yLTIyLjkyMy01MS4yLTUxLjIgICAgIGMwLTI4LjI3NywyMi45MjMtNTEuMiw1MS4yLTUxLjJzNTEuMiwyMi45MjMsNTEuMiw1MS4yQzI5OS45ODcsMjkyLjc5OCwyNzcuMDgyLDMxNS43MDMsMjQ4LjgxOCwzMTUuNzMzeiIgZmlsbD0iI0ZGRkZGRiIvPgoJCQk8cGF0aCBkPSJNMjQ4LjgxOCwyMzAuNGMtMTguODQyLDAuMDIyLTM0LjExMiwxNS4yOTEtMzQuMTMzLDM0LjEzM2MwLDQuNzEzLDMuODIxLDguNTMzLDguNTMzLDguNTMzICAgICBjNC43MTMsMCw4LjUzMy0zLjgyLDguNTMzLTguNTMzYzAuMDA5LTkuNDIyLDcuNjQ1LTE3LjA1NywxNy4wNjctMTcuMDY3YzQuNzEzLDAsOC41MzMtMy44Miw4LjUzMy04LjUzMyAgICAgUzI1My41MzEsMjMwLjQsMjQ4LjgxOCwyMzAuNHoiIGZpbGw9IiNGRkZGRkYiLz4KCQkJPHBhdGggZD0iTTQ5NC44MTgsMTE4LjA4NmMtNC4zNjEtMTQuMzktMTcuNjMtMjQuMjI4LTMyLjY2Ny0yNC4yMTljLTguMjIxLDAuMDMyLTE2LjE1LDMuMDU1LTIyLjMwNCw4LjUwNiAgICAgYy0yMy45NzQtMTEuOTQyLTU2LjA5NS0xNS43OTYtOTIuNzMzLTEyLjAyM0MzMjMuODEzLDM0LjgsMjg4LjcyOCwwLDI0OC44MTgsMGMtMzkuOTQsMC03NS4wNDcsMzQuODQ5LTk4LjM0OCw5MC40NzEgICAgIGMtMTAuNzM5LTEuMTMzLTIxLjUzOS0xLjU3Ny0zMi4zMzQtMS4zM2MtNi4zMS0xNC45NjktMjIuMjk0LTIzLjQxNy0zOC4yMTYtMjAuMTk4UzUyLjU1MSw4Ni4xNTYsNTIuNTUyLDEwMi40ICAgICBjMCwwLjg5MiwwLjE5NiwxLjczLDAuMjYzLDIuNjA1Yy0xMS45MDksNi41MTktMjEuNzcsMTYuMjItMjguNDg0LDI4LjAyYy0xNy4wMDgsMzEuMDA0LTguNjY3LDcyLjg5MiwyMy40OTYsMTE3Ljk1ICAgICBjMS4yMDIsMS42ODQsMi42MTUsMy4zNDYsMy44NzMsNS4wMjVjLTEuMjU4LDEuNjc5LTIuNjcxLDMuMzQxLTMuODczLDUuMDI1Yy0zMi4xNjIsNDUuMDU4LTQwLjUwNCw4Ni45NDYtMjMuNSwxMTcuOTQyICAgICBjMTUuNjUsMjguNiw1MC43MDgsNDQuMDIxLDk5LjQzOCw0NC4wMjFjNC4xMDgsMCw4LjMxNC0wLjExMSwxMi42MTctMC4zMzNjNC41OTEtMC4yMzUsOS4zMjctMC43NTksMTQuMDQtMS4yNCAgICAgQzE3My43MjIsNDc3LjEwMywyMDguODUxLDUxMiwyNDguODE4LDUxMmMxNS4wMzgtMC4xNzcsMjkuNjYtNC45NTksNDEuODk3LTEzLjdjNS4zNDcsMy4zNTQsMTEuNTI1LDUuMTQzLDE3LjgzNiw1LjE2NyAgICAgYzE4Ljg0Mi0wLjAyMiwzNC4xMTItMTUuMjkxLDM0LjEzMy0zNC4xMzNjLTAuMDMzLTguMTQ3LTMuMDA1LTE2LjAwOC04LjM2OS0yMi4xMzljNC42NjYtOC4zNjIsOC44NTktMTYuOTc5LDEyLjU1OS0yNS44MTEgICAgIGM0LjgzMSwwLjQ5OSw5LjY3OSwxLjAyOSwxNC4zODEsMS4yN2M0LjMwNCwwLjIyMSw4LjUxLDAuMzMyLDEyLjYxNywwLjMzM2M0OC43MjEsMCw4My43ODgtMTUuNDIxLDk5LjQzMy00NC4wMTIgICAgIGMxNy4wMDgtMzEuMDA0LDguNjY3LTcyLjg5Mi0yMy40OTYtMTE3Ljk1Yy0xLjEzNS0xLjU5MS0yLjQ3Mi0zLjE1OS0zLjY1OC00Ljc0NWMyNi4zMzYtMzUuMDYsMzkuMzY3LTcwLjExOCwzNC45NDItOTkuOTE0ICAgICBDNDkzLjYwNSwxNDguMDI1LDQ5OS4xOCwxMzIuNDc2LDQ5NC44MTgsMTE4LjA4NnogTTM1MS44MTUsMTY5LjA1OGMtMTMuMTcyLTguOTE5LTI3LjAyNS0xNy40MS00MS40NzEtMjUuMzMzICAgICBjLTEyLjYxMi02Ljg5OC0yNS4zMzYtMTMuMTgtMzguMDU5LTE4Ljg0OWMyMC41ODktNy4wODcsNDEuNzU2LTEyLjM2Niw2My4yNjEtMTUuNzc4ICAgICBDMzQyLjYyNywxMjguNTk4LDM0OC4wNjksMTQ4LjY1NCwzNTEuODE1LDE2OS4wNTh6IE0zNTUuNTksMTkyLjY3NWMyLjc3NiwyMC45OTQsNC4xNjYsNDIuMTQ4LDQuMTYxLDYzLjMyNSAgICAgYzAuMDEsMjEuMTg3LTEuMzQxLDQyLjM1Mi00LjA0Niw2My4zNjVjLTE3LjExMywxMi40MzctMzUuMDAxLDIzLjc3My01My41NTQsMzMuOTM5Yy0xNy4yNjQsOS40MjEtMzUuMDczLDE3LjgwNy01My4zMzIsMjUuMTE1ICAgICBjLTE4LjI1Ny03LjMwOC0zNi4wNjQtMTUuNjk0LTUzLjMyNi0yNS4xMTVjLTE4LjUyMy0xMC4xNzQtMzYuMzc1LTIxLjUyMy01My40NDctMzMuOTc5Yy01LjU0OS00Mi4wMzUtNS41NDktODQuNjE2LDAtMTI2LjY1MSAgICAgYzMyLjk5Ny0yNC4wOTYsNjguODY3LTQzLjk4NiwxMDYuNzgyLTU5LjIxMWMxOC4yNTEsNy4zNTcsMzYuMDU0LDE1Ljc4Myw1My4zMTUsMjUuMjMzICAgICBDMzIwLjY2NiwxNjguODY5LDMzOC41MTgsMTgwLjIxOSwzNTUuNTksMTkyLjY3NXogTTI0OC44MTgsMTcuMDY3YzMxLjE1NCwwLDU5Ljc4LDI5LjQxMyw4MC4xNTcsNzUuNzI5ICAgICBjLTI3LjQyMiw0LjY4OS01NC4yOTEsMTIuMTc4LTgwLjE4NCwyMi4zNTFjLTI1Ljg4Ni0xMC4xNDgtNTIuNzQzLTE3LjYyMi04MC4xNS0yMi4zMDcgICAgIEMxODkuMDIsNDYuNDk4LDIxNy42NTQsMTcuMDY3LDI0OC44MTgsMTcuMDY3eiBNMTYyLjA5NywxMDkuMDgxYzIxLjU1LDMuMzM4LDQyLjc1OSw4LjU5MSw2My4zNzYsMTUuNjk3ICAgICBjLTEyLjcxNCw1LjY3Ni0yNS40NzgsMTEuOTkxLTM4LjE4NywxOC45NTJjLTE0LjQ0NCw3LjkyMS0yOC4yOTQsMTYuNDExLTQxLjQ2NCwyNS4zMjkgICAgIEMxNDkuNTY5LDE0OC42NDgsMTU1LjAxMywxMjguNTg2LDE2Mi4wOTcsMTA5LjA4MXogTTg2LjY4NSw4NS4zMzNjOS40MjYsMCwxNy4wNjcsNy42NDEsMTcuMDY3LDE3LjA2NyAgICAgcy03LjY0MSwxNy4wNjctMTcuMDY3LDE3LjA2N3MtMTcuMDY3LTcuNjQxLTE3LjA2Ny0xNy4wNjdDNjkuNjI4LDkyLjk3OCw3Ny4yNjMsODUuMzQzLDg2LjY4NSw4NS4zMzN6IE0zOS4zMDIsMTQxLjIyNSAgICAgYzQuNTg1LTguMDk5LDExLjE0NC0xNC45MDcsMTkuMDY4LTE5Ljc5YzcuOTU1LDExLjg5NCwyMi41MDUsMTcuNTM0LDM2LjM5OCwxNC4xMWMxMy44OTMtMy40MjQsMjQuMTU1LTE1LjE4LDI1LjY3Mi0yOS40MDkgICAgIGM3LjkxNC0wLjE0MiwxNS44MywwLjEyLDIzLjcxNywwLjc4NGMtOC41NjksMjQuNzk0LTE0LjY4Niw1MC4zNjgtMTguMjYxLDc2LjM1NmMtMjMuMTk3LDE3LjI2NC00NC40MTgsMzcuMDM1LTYzLjI3Niw1OC45NTQgICAgIGMtMC4yODQtMC4zOTItMC42MjQtMC43OC0wLjkwNS0xLjE3M0MzMy41NzIsMjAxLjYyOSwyNS42MDksMTY2LjE3OSwzOS4zMDIsMTQxLjIyNXogTTEyMy4wNzEsMzA0LjcyNCAgICAgYy0xOC4xNTYtMTQuNTgyLTM0Ljg0NS0zMC45MDEtNDkuODMtNDguNzI0YzE0Ljk4NS0xNy44MjQsMzEuNjc0LTM0LjE0Myw0OS44My00OC43MjVjLTEuNDYxLDE1Ljc0My0yLjI1MywzMi4wMTEtMi4yNTMsNDguNzI1ICAgICBTMTIxLjYxLDI4OC45ODIsMTIzLjA3MSwzMDQuNzI0eiBNMTM1LjUwNiw0MDUuNjEyTDEzNS41MDYsNDA1LjYxMmMtNDguMzY3LDIuNTA0LTgyLjU1NC05Ljg4OC05Ni4yMDgtMzQuODQ2ICAgICBjLTEzLjY4Ny0yNC45NDYtNS43MjUtNjAuMzk2LDIyLjQxNy05OS44MjVjMC4yODEtMC4zOTMsMC42MjEtMC43ODEsMC45MDUtMS4xNzNjMTguODU5LDIxLjkxOSw0MC4wNzksNDEuNjksNjMuMjc2LDU4Ljk1MyAgICAgYzMuNTY2LDI1LjkwOSw5LjY1Niw1MS40MDcsMTguMTgyLDc2LjEzMUMxNDEuMjI2LDQwNS4wOTMsMTM4LjMwNiw0MDUuNDY5LDEzNS41MDYsNDA1LjYxMnogTTE0NS44MjEsMzQyLjk0ICAgICBjMTMuMTcyLDguOTE4LDI3LjAyNSwxNy40MDksNDEuNDcyLDI1LjMzMWMxMi42MzgsNi45MTgsMjUuNDA0LDEzLjEwOCwzOC4xNzcsMTguNzk5Yy0yMC42MzgsNy4xLTQxLjg2NiwxMi4zNS02My40MzMsMTUuNjg4ICAgICBDMTU0Ljk4MiwzODMuMzAzLDE0OS41NTgsMzYzLjI5NCwxNDUuODIxLDM0Mi45NHogTTMwOC41NTIsNDg2LjRjLTkuNDI2LDAtMTcuMDY3LTcuNjQxLTE3LjA2Ny0xNy4wNjcgICAgIHM3LjY0MS0xNy4wNjcsMTcuMDY3LTE3LjA2N3MxNy4wNjcsNy42NDEsMTcuMDY3LDE3LjA2N0MzMjUuNjA5LDQ3OC43NTUsMzE3Ljk3Myw0ODYuMzkxLDMwOC41NTIsNDg2LjR6IE0zMjAuMjU1LDQzNy4zOTggICAgIGMtMy43NC0xLjQyLTcuNzAzLTIuMTY1LTExLjcwMy0yLjE5OGMtMTguODQyLDAuMDIyLTM0LjExMiwxNS4yOTEtMzQuMTMzLDM0LjEzM2MwLjAzOSw1LjY5OCwxLjUyMiwxMS4yOTMsNC4zMTEsMTYuMjYzICAgICBjLTguODgsNS44OTMtMTkuMjU2LDkuMTMyLTI5LjkxMSw5LjMzN2MtMzEuMjAzLDAtNTkuODctMjkuNTA0LTgwLjI1NC03NS45NDVjMjcuNDQyLTQuNjI5LDU0LjMzNS0xMi4wNzEsODAuMjU0LTIyLjIwNyAgICAgYzI1Ljk5NCwxMC4xNjcsNTIuOTY5LDE3LjYyMiw4MC40OTUsMjIuMjQ1QzMyNi40NzEsNDI1LjQ0OCwzMjMuNDUyLDQzMS41NzMsMzIwLjI1NSw0MzcuMzk4eiBNMzM1Ljg3OSw0MDIuODAyICAgICBjLTIxLjY2NC0zLjMzNS00Mi45ODUtOC42MDEtNjMuNzExLTE1LjczM2MxMi43NzYtNS42OTIsMjUuNTQzLTExLjg4MywzOC4xODQtMTguODAzYzE0LjYzLTguMDI3LDI4LjU0My0xNi41NDgsNDEuNjczLTI1LjQyOCAgICAgQzM0OC4zNiwzNjMuMjUsMzQyLjk1OCwzODMuMzEsMzM1Ljg3OSw0MDIuODAyeiBNNDU4LjMzNSwzNzAuNzc1Yy0xMy42NTQsMjQuOTQ2LTQ3Ljg1NCwzNy4zMDQtOTYuMjA0LDM0LjgzOCAgICAgYy0yLjg5OC0wLjE0OS01LjkxNi0wLjUzMy04Ljg2OC0wLjc4NmM4LjU2Ni0yNC42NjEsMTQuNzA5LTUwLjA5NywxOC4zNDQtNzUuOTQ5YzIzLjI5MS0xNy4yMzcsNDQuNjExLTM2Ljk4OCw2My41NzQtNTguODk2ICAgICBjMC4yMzIsMC4zMjIsMC41MTIsMC42MzksMC43NDIsMC45NjFDNDY0LjA2NCwzMTAuMzcxLDQ3Mi4wMjcsMzQ1LjgyMSw0NTguMzM1LDM3MC43NzV6IE0zNzQuNTY1LDIwNy4yNzYgICAgIGMxOC4yMTIsMTQuNjI4LDM0Ljk0NywzMS4wMDYsNDkuOTY0LDQ4Ljg5OWMtMTUuMDgsMTcuODMzLTMxLjg0NSwzNC4xNjktNTAuMDYzLDQ4Ljc4MmMxLjUyMy0xNS45NywyLjM1MS0zMi4zMzQsMi4zNTEtNDguOTU3ICAgICBDMzc2LjgxOCwyMzkuMjg2LDM3Ni4wMjYsMjIzLjAxOCwzNzQuNTY1LDIwNy4yNzZ6IE00MzUuMjI4LDI0Mi40N0w0MzUuMjI4LDI0Mi40N2MtMTguOTEtMjIuMDE2LTQwLjIwMi00MS44NjctNjMuNDg3LTU5LjE5MSAgICAgYy0zLjU3NC0yNS45NjgtOS42ODMtNTEuNTIzLTE4LjI0MS03Ni4yOTljMjUuOTQzLTMuMzcxLDUyLjMxOC0wLjA2NSw3Ni42MjcsOS42MDZjLTEuMzU3LDMuNjU0LTIuMDcsNy41MTYtMi4xMDgsMTEuNDE0ICAgICBjMC4wMjIsMTguODQyLDE1LjI5MSwzNC4xMTIsMzQuMTMzLDM0LjEzM2MwLjgyMywwLDEuNTk2LTAuMTg1LDIuNDA1LTAuMjQzQzQ2Ni45NTEsMTg1LjU4Miw0NTYuMTU0LDIxMy43MDcsNDM1LjIyOCwyNDIuNDd6ICAgICAgTTQ2Mi4xNTIsMTQ1LjA2N2MtOS40MjYsMC0xNy4wNjctNy42NDEtMTcuMDY3LTE3LjA2N2MwLjAwOS05LjQyMiw3LjY0NS0xNy4wNTcsMTcuMDY3LTE3LjA2NyAgICAgYzkuNDI2LDAsMTcuMDY3LDcuNjQxLDE3LjA2NywxNy4wNjdTNDcxLjU3NywxNDUuMDY3LDQ2Mi4xNTIsMTQ1LjA2N3oiIGZpbGw9IiNGRkZGRkYiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+				<strong>&nbsp;&nbsp;Album</strong>
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			</div>
+		  </div>
+		</header>
+	
+		<main role="main">
+	
+		  <section class="jumbotron text-center">
+			<div class="container">
+			  <h1 class="jumbotron-heading">Hire me. I want to work for you.</h1>
+			  <p class="lead text-muted">
+				  Looking to advance my career in <strong>data science</strong> and <strong>machine learning</strong>. Driven to provide actionable intelligence for companies to make smarter decisions.
+			  </p>
+			  <p>
+				<a href="#" class="btn btn-primary my-2">Main call to action</a>
+				<a href="#" class="btn btn-secondary my-2">Secondary action</a>
+			  </p>
+			</div>
+		  </section>
+	
+		  <div class="album py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12"><h3>Projects</h3></div>
+				</div>
+			  <div class="row">
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+	
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+	
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card mb-4 box-shadow">
+					<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+					<div class="card-body">
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <div class="d-flex justify-content-between align-items-center">
+						<div class="btn-group">
+						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						</div>
+						<small class="text-muted">9 mins</small>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	
+		</main>
+	
+		<footer class="text-muted">
+		  <div class="container">
+			<p class="float-right">
+			  <a href="#">Back to top</a>
+			</p>
+			<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+			<p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+			<p><div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+		  </div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
